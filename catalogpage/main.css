@@ -1,0 +1,44 @@
+body{
+    background-color:lightskyblue;
+}
+.divone{
+    font-family: 'Clarkson',Helvetica,sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1em;
+    letter-spacing: 0;
+    text-rendering: geometricPrecision;
+  
+    text-decoration: none;
+    font-size: 18px;
+    color:white;
+    -webkit-font-smoothing: antialiased;
+}
+.divtwo{
+    font-family: 'Clarkson',Helvetica,sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1em;
+    letter-spacing: 0;
+    text-rendering: geometricPrecision;
+ 
+    text-decoration: none;
+    font-size: 18px;
+    color:white;
+    -webkit-font-smoothing: antialiased;
+
+}
+.divthree{
+    color:white;
+    font-family: 'Clarkson',Helvetica,sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1em;
+    letter-spacing: 0;
+    text-rendering: geometricPrecision;
+
+    text-decoration: none;
+    font-size: 18px;
+    -webkit-font-smoothing: antialiased;
+
+}

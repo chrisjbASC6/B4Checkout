@@ -1,0 +1,109 @@
+<html>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.js"></script>
+        <script src="sketch.js"></script>
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+        <div id="logo">
+            <img src="images/coset.png">
+        </div>  
+        <hr>
+        <div class="tab">
+            <button class="tablinks" onmouseover="openCity(event, 'Adidas')">Adidas</button>
+            <button class="tablinks" onmouseover="openCity(event, 'Champion')">Champion</button>
+            <button class="tablinks" onmouseover="openCity(event, 'Puma')">Puma</button>
+        </div>
+        
+        
+        
+    
+        
+    
+    <div id="brands">
+        <div id="Adidas" class="tabcontent">
+            <h3>Adidas</h3>
+            <img class="adidas" src="images/Adidas/NMN52LL_ka.webp">
+            <img class="adidas" src="images/Adidas/NMN5KW7_ka.webp">
+            <img class="adidas" src="images/Adidas/NMN69Y7_ka.webp">
+            <img class="adidas" src="images/Adidas/NMN6ACE_ka.webp">
+            <img class="adidas" src="images/Adidas/NMN6ADQ_ka.webp">
+            <img class="adidas" src="images/Adidas/NMN6AFW_ka.webp">
+            <img class="adidas" src="images/Adidas/NMN6AMP_ka.webp">
+            
+        </div>
+        
+          <div id="Champion" class="tabcontent">
+              <h3>Champion</h3>
+            <img class="Champion" src="images/Champion/NMN5T56_ka.jpg">
+            <img class="Champion" src="images/Champion/NMN5T58_ka.webp">
+            <img class="Champion" src="images/Champion/NMN5T5A_ka.webp">
+            <img class="Champion" src="images/Champion/NMN5T5C_ka.webp">
+            <img class="Champion" src="images/Champion/NMN5T5E_ka.jpg">
+            <img class="Champion" src="images/Champion/NMN5T5K_ka.webp">
+            <img class="Champion" src="images/Champion/NMN61LM_01_k.jpg">
+            <img class="Champion" src="images/Champion/NMN62MD_ka.jpg">
+            <img class="Champion" src="images/Champion/NMN686L_01_k.jpg">
+            <img class="Champion" src="images/Champion/NMN69VW_0M_k.jpg">
+            <img class="Champion" src="images/Champion/NMN69VW_50_k.jpg">
+            
+        </div>
+        <div id="Puma" class="tabcontent">
+           <h3>Puma</h3>
+           <img class="Puma" src="images/Puma/NMN63HB_ka.webp">
+           <img class="Puma" src="images/Puma/NMN63HC_ka.jpg">
+           <img class="Puma" src="images/Puma/NMN63HE_ka.webp">
+           <img class="Puma" src="images/Puma/NMN63NB_ka.jpg">
+           <img class="Puma" src="images/Puma/NMN64XE_ka.webp">
+      
+        </div>
+    </div>
+        
+        <script>
+            
+            function openCity(event, cityName) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
+
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the link that opened the tab
+  document.getElementById(cityName).style.display = "block";
+  event.currentTarget.className += " active";
+}
+
+let adidasImageArray
+let pumaImageArray
+let championImageArray
+let mouseXArray = [];
+let mouseYArray = [];
+
+function setup(){
+    createCanvas(700,700)
+    noStroke()
+    imageMode(CENTER)
+    adidasImageArray 
+    pumaImageArray
+    championImageArray
+}
+
+function draw(){
+    background(255,255,255)
+}
+        </script>
+
+
+
+
+     </body>
+      </html>

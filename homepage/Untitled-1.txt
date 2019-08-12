@@ -1,0 +1,216 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="main.css">
+    <title>Welcome!</title>
+    
+<body>
+    <div>
+        <img id="first" src="images/coset.png">
+        <a href=file:///C:/Users/Admin/Desktop/homepage/index.html> Home</a>
+
+    </div>
+        <div id="seconddiv">
+            
+            <button id="div4">Log In/Sign Up</button>
+        </div>
+        <div>
+            
+                        <div id="div3">
+                            <div class="dropdown">
+                                <span><link><a href=file:///C:/Users/Admin/Desktop/catalogpage/index.html>Catalog</a></span>
+                                <div class="dropdown-content">
+                                <h1>Sports</h1>
+                                <div>Nike</div>
+                                <div>Jordan</div>
+                                <div>Under Armour</div>
+                                <div>Puma</div>
+                                <div>Adidas</div>
+                                <div>Champion</div>
+                                </div>
+                              </div>
+                            <div>Start the Process!</div>
+                            <div>Contact Us</div>
+                    
+                        </div>
+    
+    
+        </div>
+    
+
+
+    </div>
+
+ 
+
+ 
+    <div id="imageshome">
+        
+        <img id="adidas"src="images/adidasLogo.jpg">
+        <img id="champ" src="images/champion.jfif">
+        <img id="jord" src="images/jordanLogo.jpg">
+        <img id="nike" src="images/nikeLogo.jpg">
+        <img id ="puma" src="images/pumaLogo.jpg">
+        <img id="under" src="images/underarmorLogo.png">
+    </div>
+    <div id="designer">
+            <img src="images/designerClothes.jpg">
+
+    </div>
+
+    <div id="rect">
+        For the oppurtunity to see you're desired oulfit before you checkout with a variety of brands to choose from.
+        <button class="button">Click Here</button>
+    </div>
+    <script>
+
+    
+    
+    </script>
+
+
+
+
+
+</body>
+</html>#first{
+    width:150px;
+    display:flex;
+    justify-content: flex-start;
+
+
+}
+#second{
+    background-color:lightskyblue;
+}
+  .button{
+     background-color:black;
+    color:black;
+    border:none;
+     font-size: 16px;
+     opacity: 1;
+     white-space:nowrap;
+    cursor:pointer;
+    width:300px;
+     padding: 15px solid black;
+    height:100px;
+  
+    text-decoration: none;
+    -webkit-transition-duration: 0.4s; /* Safari */
+     transition-duration: 0.4s;
+    display: inline-block;
+                
+                
+                    
+                }
+h1{
+    position: relative;
+    border-bottom: none;
+    font-family: 'Clarkson',Helvetica,sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1em;
+    letter-spacing: 0;
+    text-rendering: geometricPrecision;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 18px;
+    -webkit-font-smoothing: antialiased;
+    color:blue;
+    font-weight:bold;
+
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.dropdown-content2{
+    position: relative;
+    border-bottom: none;
+    font-family: 'Clarkson',Helvetica,sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1em;
+    letter-spacing: 0;
+    text-rendering: geometricPrecision;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 18px;
+    -webkit-font-smoothing: antialiased;
+}
+h2{
+    position: relative;
+    border-bottom: none;
+    font-family: 'Clarkson',Helvetica,sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1em;
+    letter-spacing: 0;
+    text-rendering: geometricPrecision;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 18px;
+    -webkit-font-smoothing: antialiased;
+
+}
+#imageshome{
+    display:flex;
+   flex-direction:center;
+   justify-content: space-between;
+}
+
+#adidas{
+    width:100px;
+    display:flex;
+    flex-direction:row
+}
+#champ{
+    width:100px;
+}
+#designer{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+#jord{
+    width:100px;
+}
+#nike{
+    width:100px;
+}
+#puma{
+    width:100px;
+}
+#under{
+    width:100px;
+}
+body{
+    background-color:lightskyblue;
+}
+
+#rect{
+    width:1200x;
+    height:150px;
+    padding: 3px;
+    margin:20px;
+    border: 4px solid white;
+    background-color:lightskyblue;
+    font-family:"Clarkson";
+    color:white;
+    font-size: 48px;
+    display:flex;
+    justify-content: center;
+    
+}
+
+  .button:hover {
+    background-color: purple; /* Green */
+    color: white;
+  }
+  #div4:hover{
+    background-color: purple; /* Green */
+    color: white;
+
+  }
+  
