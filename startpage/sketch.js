@@ -30,11 +30,11 @@ function preload() {
         let temp = loadImage("images/champion/champion_" + i + ".png")
         championArray.push(temp);
       }
-    // for(let i = 0; i < 53; i++){
-    //     let temp = loadImage("images/Nike/nike_" + i + ".png")
-    //     nikeArray.push(temp);
+    for(let i = 0; i < 38; i++){
+        let temp = loadImage("images/Nike/nike_" + i + ".png")
+        nikeArray.push(temp);
 
-    // }
+    }
 }
 
 
@@ -50,7 +50,7 @@ function setup() {
 function draw() {
     // paint the background black
     background(0);
-
+//(50,950,100,100)
     // fill(0, 255, 0);
     // rect(0, 0, 50, 50);
     image(adidasArray[0], 50, 50, 100, 100);
@@ -67,19 +67,20 @@ function draw() {
     image(championArray[6],1150,50,100,100)
     image(championArray[7],1250,50,100,100)
     image(championArray[8],1350,50,100,100)
-    // image(nikeArray[5],1450,50,100,100)
-    // image(nikeArray[6],1550,50,100,100)
-    // image(nikeArray[7],1650,50,100,100)
-    // image(nikeArray[9],1750,50,100,100)
-    // image(nikeArray[11],1850,50,100,100)
-    // image(nikeArray[12],1950,50,100,100)
-    // image(nikeArray[13],2050,50,100,100)
-    // image(nikeArray[14],2150,50,100,100)
-    // image(nikeArray[16],2250,50,100,100)
-    // image(nikeArray[20],2350,50,100,100)
-    // image(nikeArray[21],2450,50,100,100)
-    // image(nikeArray[24],2550,50,100,100)
-    // image(nikeArray[25],2650,50,100,100)
+    image(nikeArray[7],50,150,100,100)
+    image(nikeArray[8],150,150,100,100)
+    image(nikeArray[9],250,150,100,100)
+    image(nikeArray[11],350,150,100,100)
+    image(nikeArray[15],450,150,100,100)
+    image(nikeArray[19],550,150,100,100)
+    image(nikeArray[21],650,150,100,100)
+    image(nikeArray[14],750,150,100,100)
+    image(nikeArray[22],850,150,100,100)
+    image(nikeArray[23],950,150,100,100)
+    image(nikeArray[30],1050,150,100,100)
+    image(nikeArray[24],1150,150,100,100)
+    image(nikeArray[25],1250,50,100,100)
+    // image(nikeArray[30],)
     
 
     
