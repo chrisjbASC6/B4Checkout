@@ -142,37 +142,43 @@ function draw() {
         image(championArray[8], mouseX, mouseY,270,250)
     }
     if(currentColor == "rgb(132, 3, 252)"){
-        image(nikeArray[5], mouseX, mouseY,250,250)
+        image(nikeArray[7], mouseX, mouseY250,250)
     }
     if(currentColor == "rgb(186, 3, 252)"){
-        image(nikeArray[6], mouseX, mouseY,250,250)
+        image(nikeArray[8], mouseX, mouseY,250,250)
     }
     if(currentColor == "rgb(252, 3, 240)"){
-        image(nikeArray[7], mouseX, mouseY,250,250)
-    }
-    if(currentColor == "rgb(252, 3, 103)"){
         image(nikeArray[9], mouseX, mouseY,250,250)
     }
-    if(currentColor == "black"){
+    if(currentColor == "rgb(252, 3, 103)"){
         image(nikeArray[11], mouseX, mouseY,250,250)
     }
+    if(currentColor == "black"){
+        image(nikeArray[15], mouseX, mouseY,250,250)
+    }
     if(currentColor == "white"){
-        image(nikeArray[12],mouseX,mouseY,250,250)
+        image(nikeArray[19],mouseX,mouseY,250,250)
     }
     if(currentColor == "yellow"){
-        image(nikeArray[13],mouseX,mouseY,250,250)
+        image(nikeArray[21],mouseX,mouseY,250,250)
     }
     if(currentColor == "orange"){
         image(nikeArray[14],mouseX,mouseY,250,250)
     }
     if(currentColor == "brown"){
-        image(nikeArray[16],mouseX,mouseY,250,250)
+        image(nikeArray[22],mouseX,mouseY,250,250)
     }
     if(currentColor == "pink"){
-        image(nikeArray[20],mouseX,mouseY,250,250)
+        image(nikeArray[23],mouseX,mouseY,250,250)
     }
     if(currentColor == "purple"){
-        image(nikeArray[21],mouseX,mouseY,250,250)
+        image(nikeArray[30],mouseX,mouseY,250,250)
+    }
+    if(currentcolor == "a"){
+        image(nikeArray[24],mouseX,mouseY,250,250)
+    }
+    if(currentColor =="b"){
+        image(nikeArray[25],mouseX,mouseY,250,250)
     }
    
 }
