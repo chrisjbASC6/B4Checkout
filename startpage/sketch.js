@@ -1,3 +1,7 @@
+// pants
+//nike imaages
+
+
 
 let manneImage;
 let adidasArray =[];
@@ -8,18 +12,12 @@ let currentColor = "";
 let screenImagesArray = [];
 let mouseXArray = [];
 let mouseYArray = [];
+let widthArray = [];
+let heightArray = [];
 
-
-function setup() {
-    createCanvas(2700, 700);
-    noStroke();
-
-    // change imageMode
-    imageMode(CENTER);
-
+function preload() {
     // load images
-
-    manneImage = loadImage("images/manne.png")   
+    manneImage = loadImage("images/manne2.png")   
     for (let i = 0; i < 3; i++) {
         let temp = loadImage("images/Adidas/adidas_" + i + ".png");
         adidasArray.push(temp);
@@ -32,11 +30,20 @@ function setup() {
         let temp = loadImage("images/champion/champion_" + i + ".png")
         championArray.push(temp);
       }
-    for(let i = 0; i < 53; i++){
-        let temp = loadImage("images/Nike/nike_" + i + ".png")
-        nikeArray.push(temp);
+    // for(let i = 0; i < 53; i++){
+    //     let temp = loadImage("images/Nike/nike_" + i + ".png")
+    //     nikeArray.push(temp);
 
-    }
+    // }
+}
+
+
+function setup() {
+    createCanvas(2000, 1000);
+    noStroke();
+
+    // change imageMode
+    imageMode(CENTER);
       
 }
 
@@ -60,29 +67,29 @@ function draw() {
     image(championArray[6],1150,50,100,100)
     image(championArray[7],1250,50,100,100)
     image(championArray[8],1350,50,100,100)
-    image(nikeArray[5],1450,50,100,100)
-    image(nikeArray[6],1550,50,100,100)
-    image(nikeArray[7],1650,50,100,100)
-    image(nikeArray[9],1750,50,100,100)
-    image(nikeArray[11],1850,50,100,100)
-    image(nikeArray[12],1950,50,100,100)
-    image(nikeArray[13],2050,50,100,100)
-    image(nikeArray[14],2150,50,100,100)
-    image(nikeArray[16],2250,50,100,100)
-    image(nikeArray[20],2350,50,100,100)
-    image(nikeArray[21],2450,50,100,100)
+    // image(nikeArray[5],1450,50,100,100)
+    // image(nikeArray[6],1550,50,100,100)
+    // image(nikeArray[7],1650,50,100,100)
+    // image(nikeArray[9],1750,50,100,100)
+    // image(nikeArray[11],1850,50,100,100)
+    // image(nikeArray[12],1950,50,100,100)
+    // image(nikeArray[13],2050,50,100,100)
+    // image(nikeArray[14],2150,50,100,100)
+    // image(nikeArray[16],2250,50,100,100)
+    // image(nikeArray[20],2350,50,100,100)
+    // image(nikeArray[21],2450,50,100,100)
     // image(nikeArray[24],2550,50,100,100)
     // image(nikeArray[25],2650,50,100,100)
     
 
     
     // draw mannequin box
-    image(manneImage, 1500,350,800,500)
+    image(manneImage, 800,700,900,1000)
     
 
     // draw all images in screenImagesArray
     for (let i = 0; i < screenImagesArray.length; i++) {
-        image(screenImagesArray[i], mouseXArray[i], mouseYArray[i], 300, 300);
+        image(screenImagesArray[i], mouseXArray[i], mouseYArray[i], widthArray[i], heightArray[i]);
     }
 
     // every time the draw loop iterates, check currentPokemon
@@ -93,7 +100,7 @@ function draw() {
 
     // if currentColor is red
     if (currentColor == "red") {
-        image(adidasArray[1], mouseX, mouseY, 250, 250);
+        image(adidasArray[1], mouseX, mouseY, 262, 250);
     }
 
     // if currentColor is blue
@@ -131,7 +138,7 @@ function draw() {
         image(championArray[7], mouseX, mouseY,250,250)
     }
     if(currentColor == "rgb(3, 24, 252)"){
-        image(championArray[8], mouseX, mouseY,250,250)
+        image(championArray[8], mouseX, mouseY,270,250)
     }
     if(currentColor == "rgb(132, 3, 252)"){
         image(nikeArray[5], mouseX, mouseY,250,250)
@@ -172,12 +179,12 @@ function draw() {
 function mouseClicked() {
     // check if one of the boxes are clicked
     // if the green box is clicked
-    if (mouseX > 50 && mouseX < 100 && mouseY > 0 && mouseY < 100) {
+    if (mouseX > 0 && mouseX < 100 && mouseY > 0 && mouseY < 100) {
         currentColor = "green";
     }
 
     // if the red box is clicked
-    if (mouseX > 150 && mouseX < 200 && mouseY > 0 && mouseY < 100) {
+    if (mouseX > 100 && mouseX < 200 && mouseY > 0 && mouseY < 100) {
         currentColor = "red";
     }
     
@@ -273,80 +280,129 @@ function mouseClicked() {
    
         if (currentColor == "green") {
             screenImagesArray.push(adidasArray[0]);
+            widthArray.push(250);
+            heightArray.push(250);
         }
 
         if (currentColor == "red") {
             screenImagesArray.push(adidasArray[1]);
+            widthArray.push(262);
+            heightArray.push(250);
         }
         if (currentColor == "blue"){
             screenImagesArray.push(adidasArray[2])
+            widthArray.push(250);
+            heightArray.push(250);
         }
         
         if(currentColor == "rgb(252, 98, 3)") {
             screenImagesArray.push(pumaArray[1]);
+            widthArray.push(250);
+            heightArray.push(250);
         }
         if(currentColor == "rgb(252, 157, 3)") {
             screenImagesArray.push(pumaArray[2]);
+            widthArray.push(250);
+            heightArray.push(250);
         }
         if(currentColor == "rgb(252, 223, 3)") {
             screenImagesArray.push(championArray[0]);
+            widthArray.push(250);
+            heightArray.push(250);
         }
         if(currentColor == "rgb(252, 252, 3)") {
             screenImagesArray.push(championArray[1]);
+            widthArray.push(250);
+            heightArray.push(250);
         }
         if(currentColor == "rgb(140, 252, 3)"){
             screenImagesArray.push(championArray[2]);
+            widthArray.push(250);
+            heightArray.push(250);
         }
         if(currentColor == "rgb(61, 252, 3)") {
             screenImagesArray.push(championArray[3]);
+            widthArray.push(250);
+            heightArray.push(250);
         }
         if(currentColor == "rgb(3, 252, 177)") {
             screenImagesArray.push(championArray[4]);
+            widthArray.push(250);
+            heightArray.push(250);
         }
         if(currentColor == "rgb(3, 252, 240)") {
             screenImagesArray.push(championArray[5]);
+            widthArray.push(250);
+            heightArray.push(250);
         }
         if(currentColor == "rgb(3, 198, 252)"){
             screenImagesArray.push(championArray[6]);
+            widthArray.push(250);
+            heightArray.push(250);
         }
         if(currentColor == "rgb(3, 115, 252)"){
             screenImagesArray.push(championArray[7]);
+            widthArray.push(250);
+            heightArray.push(250);
         }
         if(currentColor == "rgb(3, 24, 252)") {
             screenImagesArray.push(championArray[8]);
+            widthArray.push(270);
+            heightArray.push(250);
         }
         if(currentColor == "rgb(132, 3, 252)") {
             screenImagesArray.push(nikeArray[5]);
+            widthArray.push(250);
+            heightArray.push(250);
         }
         if(currentColor == "rgb(186, 3, 252)"){
             screenImagesArray.push(nikeArray[6]);
+            widthArray.push(250);
+            heightArray.push(250);
         }
         if(currentColor == "rgb(252, 3, 240)") {
             screenImagesArray.push(nikeArray[7]);
+            widthArray.push(250);
+            heightArray.push(250);
         }
         if(currentColor == "rgb(252, 3, 103)") {
             screenImagesArray.push(nikeArray[9]);
+            widthArray.push(250);
+            heightArray.push(250);
         }
         if(currentColor == "black") {
-            screenImagesArray.push(nikeArray[11]);
+            screenImagesArray.push(nikeArray[11]);widthArray.push(250);
+            heightArray.push(250);
         }
         if(currentColor == "white") {
             screenImagesArray.push(nikeArray[12]);
+            widthArray.push(250);
+            heightArray.push(250);
         }
         if(currentColor == "yellow") {
             screenImagesArray.push(nikeArray[13]);
+            widthArray.push(250);
+            heightArray.push(250);
         }
         if(currentColor == "orange") {
             screenImagesArray.push(nikeArray[14]);
+            widthArray.push(250);
+            heightArray.push(250);
         }
         if(currentColor == "brown") {
             screenImagesArray.push(nikeArray[16]);
+            widthArray.push(250);
+            heightArray.push(250);
         }
         if(currentColor == "pink") {
             screenImagesArray.push(nikeArray[20]);
+            widthArray.push(250);
+            heightArray.push(250);
         }
         if(currentColor == "purple") {
             screenImagesArray.push(nikeArray[21]);
+            widthArray.push(250);
+            heightArray.push(250);
         }
      
         
