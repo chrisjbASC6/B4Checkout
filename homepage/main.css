@@ -30,6 +30,39 @@ body{
   display:flex;
   justify-content: center;
 }
+.premade_images{
+  display:flex;
+  justify-content: space-between;
+}
+#first{
+  width:200px;
+  height:100px;
+}
+#second{
+  width:200px;
+  height:150px;
+}
+#third{
+  width:200px;
+  height:100px;
+}
+#fourth{
+  width:200px;
+  height:100px;
+}
+#fifth{
+  width:200px;
+  height:100px;
+}
+#sixth{
+  width:200px;
+  height:150px;
+}
+#seventh{
+  width:200px;
+  height:100px;
+}
+
 
 
 

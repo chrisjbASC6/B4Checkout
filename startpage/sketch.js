@@ -2,7 +2,7 @@
 //nike imaages
 
 
-
+// let lolImage;
 let manneImage;
 let adidasArray =[];
 let pumaArray=[];
@@ -17,20 +17,19 @@ let heightArray = [];
 
 function preload() {
     // load images
-    manneImage = loadImage("images/manne2.png")   
-    for (let i = 0; i < 3; i++) {
-        let temp = loadImage("images/Adidas/adidas_" + i + ".png");
-        adidasArray.push(temp);
-      }
-      for(let i = 1; i < 4; i++){
-        let temp = loadImage("images/puma/puma_" + i + ".png");
+    manneImage = loadImage("images/whiteboy.png")  
+    // lolImage = loadImage("images/lolmanne.png")
+
+  
+      for(let i = 0; i < 3; i++){
+        let temp = loadImage("images/puma/puma_" + (i) + ".png");
         pumaArray.push(temp);
       }
-      for(let i = 0; i < 9; i++){
+      for(let i = 0; i < 6; i++){
         let temp = loadImage("images/champion/champion_" + i + ".png")
         championArray.push(temp);
       }
-    for(let i = 0; i < 1; i++){
+    for(let i = 0; i < 13; i++){
         let temp = loadImage("images/Nike/nike_" + i + ".png")
         nikeArray.push(temp);
 
@@ -39,7 +38,7 @@ function preload() {
 
 
 function setup() {
-    createCanvas(2000, 1000);
+    createCanvas(2200,700);
     noStroke();
 
     // change imageMode
@@ -51,41 +50,36 @@ function draw() {
     // paint the background black
     background(0);
 //(50,950,100,100)
-    // fill(0, 255, 0);
-    // rect(0, 0, 50, 50);
-    image(adidasArray[0], 50, 50, 100, 100);
-    image(adidasArray[1], 150,50,100,100);
-   image(adidasArray[2], 250,50,100,100)
-    image(pumaArray[1],350,50,100,100)
-    image(pumaArray[2],450,50,100,100)
-    image(championArray[0],550,50,100,100)
-    image(championArray[1],650,50,100,100)
-    image(championArray[2],750,50,100,100)
-    image(championArray[3],850,50,100,100)
-    image(championArray[4],950,50,100,100)
-    image(championArray[5],1050,50,100,100)
-    image(championArray[6],1150,50,100,100)
-    image(championArray[7],1250,50,100,100)
-    // image(championArray[8],1350,50,100,100)
-    image(nikeArray[0],1350,50,100,100)
-    // image(nikeArray[8],150,150,100,100)
-    // image(nikeArray[9],250,150,100,100)
-    // image(nikeArray[11],350,150,100,100)
-    // image(nikeArray[15],450,150,100,100)
-    // image(nikeArray[19],550,150,100,100)
-    // image(nikeArray[21],650,150,100,100)
-    // image(nikeArray[14],750,150,100,100)
-    // image(nikeArray[22],850,150,100,100)
-    // image(nikeArray[23],950,150,100,100)
-    // image(nikeArray[30],1050,150,100,100)
-    // image(nikeArray[24],1150,150,100,100)
-    // image(nikeArray[25],1250,150,100,100)
-    // image(nikeArray[30],)
+
+    image(nikeArray[0], 50, 50, 100, 100);
+    image(pumaArray[0], 150,50,100,100);
+    image(pumaArray[1], 250,50,100,100)
+    image(pumaArray[2],350,50,100,100)
+    image(championArray[0],450,50,100,100)
+    image(championArray[1],550,50,100,100)
+    image(championArray[2],650,50,100,100)
+    image(championArray[3],750,50,100,100)
+    image(championArray[4],850,50,100,100)
+    image(championArray[5],950,50,100,100)
+    image(nikeArray[2],1050,50,100,100)
+    image(nikeArray[3],1150,50,100,100)
+    image(nikeArray[7],1250,50,100,100)
+    image(nikeArray[8],1350,50,100,100)
+    image(nikeArray[11],1450,50,100,100)
+    image(nikeArray[4],1550,50,100,100)
+    image(nikeArray[5],1650,50,100,100)
+    image(nikeArray[6],1750,50,100,100)
+    image(nikeArray[9],1850,50,100,100)
+    image(nikeArray[10],1950,50,100,100)
+    image(nikeArray[12],2050,50,100,100)
+
+    
     
 
     
     // draw mannequin box
-    image(manneImage, 800,700,1000,1000)
+    image(manneImage, 1100,350,275,275)
+   
     
 
     // draw all images in screenImagesArray
@@ -96,90 +90,73 @@ function draw() {
     // every time the draw loop iterates, check currentPokemon
     // if currentColor is green
     if (currentColor == "green") {
-        image(adidasArray[0], mouseX, mouseY, 250, 250);
+        image(nikeArray[0], mouseX, mouseY, 415, 280);
     }
 
     // if currentColor is red
     if (currentColor == "red") {
-        image(adidasArray[1], mouseX, mouseY, 262, 250);
+        image(pumaArray[0], mouseX, mouseY, 262, 290);
     }
 
     // if currentColor is blue
     if (currentColor == "blue") {
-        image(adidasArray[2], mouseX, mouseY, 250, 250);
+        image(pumaArray[1], mouseX, mouseY, 250, 270);
     }
-    if(currentColor == "rgb(252, 98, 3)"){
-        image(pumaArray[1], mouseX, mouseY,250,250)
+    if(currentColor == "c"){
+        image(pumaArray[2], mouseX, mouseY,240,240)
     }
-    if(currentColor == "rgb(252, 157, 3)"){
-        image(pumaArray[2], mouseX, mouseY,250,250)
+    if(currentColor == "d"){
+        image(championArray[0], mouseX, mouseY,250,250)
     }
-    if(currentColor == "rgb(252, 223, 3)"){
-        image(championArray[0] , mouseX, mouseY,250,250)
+    if(currentColor == "e"){
+        image(championArray[1] , mouseX, mouseY,240,240)
     }
-    if(currentColor == "rgb(252, 252, 3)"){
-        image(championArray[1], mouseX, mouseY,250,250)
+    if(currentColor == "f"){
+        image(championArray[2], mouseX, mouseY,240,240)
     }
-    if(currentColor == "rgb(140, 252, 3)"){
-        image(championArray[2], mouseX, mouseY,250,250)
+    if(currentColor == "g"){
+        image(championArray[3], mouseX, mouseY,240,250)
     }
-    if(currentColor == "rgb(61, 252, 3)"){
-        image(championArray[3], mouseX, mouseY,250,250)
+    if(currentColor == "h"){
+        image(championArray[4], mouseX, mouseY,225,250)
     }
-    if(currentColor == "rgb(3, 252, 177)"){
-        image(championArray[4], mouseX, mouseY,250,250)
+    if(currentColor == "i"){
+        image(championArray[5], mouseX, mouseY,240,240)
     }
-    if(currentColor == "rgb(3, 252, 240)"){
-        image(championArray[5], mouseX, mouseY,250,250)
+    if(currentColor == "j"){
+        image(nikeArray[2], mouseX, mouseY,410,250)
     }
-    if(currentColor == "rgb(3, 198, 252)"){
-        image(championArray[6], mouseX, mouseY,250,250)
+    if(currentColor == "k"){
+        image(nikeArray[3], mouseX, mouseY,340,180)
     }
-    if(currentColor == "rgb(3, 115, 252)"){
-        image(championArray[7], mouseX, mouseY,250,250)
+    if(currentColor == "l"){
+        image(nikeArray[7], mouseX, mouseY,240,240)
     }
-    if(currentColor == "rgb(3, 24, 252)"){
-        image(nikeArray[0], mouseX, mouseY,270,250)
+    if(currentColor == "m"){
+        image(nikeArray[8], mouseX, mouseY,380,250)
     }
-    // if(currentColor == "rgb(132, 3, 252)"){
-    //     image(nikeArray[7], mouseX, mouseY250,250)
-    // }
-    // if(currentColor == "rgb(186, 3, 252)"){
-    //     image(nikeArray[8], mouseX, mouseY,250,250)
-    // }
-    // if(currentColor == "rgb(252, 3, 240)"){
-    //     image(nikeArray[9], mouseX, mouseY,250,250)
-    // }
-    // if(currentColor == "rgb(252, 3, 103)"){
-    //     image(nikeArray[11], mouseX, mouseY,250,250)
-    // }
-    // if(currentColor == "black"){
-    //     image(nikeArray[15], mouseX, mouseY,250,250)
-    // }
-    // if(currentColor == "white"){
-    //     image(nikeArray[19],mouseX,mouseY,250,250)
-    // }
-    // if(currentColor == "yellow"){
-    //     image(nikeArray[21],mouseX,mouseY,250,250)
-    // }
-    // if(currentColor == "orange"){
-    //     image(nikeArray[14],mouseX,mouseY,250,250)
-    // }
-    // if(currentColor == "brown"){
-    //     image(nikeArray[22],mouseX,mouseY,250,250)
-    // }
-    // if(currentColor == "pink"){
-    //     image(nikeArray[23],mouseX,mouseY,250,250)
-    // }
-    // if(currentColor == "purple"){
-    //     image(nikeArray[30],mouseX,mouseY,250,250)
-    // }
-    // if(currentcolor == "a"){
-    //     image(nikeArray[24],mouseX,mouseY,250,250)
-    // }
-    // if(currentColor =="b"){
-    //     image(nikeArray[25],mouseX,mouseY,250,250)
-    // }
+    if(currentColor == "n"){
+        image(nikeArray[11],mouseX, mouseY,250,250)
+    }
+    if(currentColor == "o"){
+        image(nikeArray[4],mouseX,mouseY,415,280)
+    }
+    if(currentColor == "p"){
+        image(nikeArray[5],mouseX,mouseY,415,280)
+    }
+    if(currentColor == "q"){
+        image(nikeArray[6],mouseX,mouseY,415,280)
+    }
+    if(currentColor == "r"){
+        image(nikeArray[9],mouseX,mouseY,415,280)
+    }
+    if(currentColor == "s"){
+        image(nikeArray[10],mouseX,mouseY,415,280)
+    }
+    if(currentColor == "t"){
+        image(nikeArray[12],mouseX,mouseY,415,280)
+    }
+    
    
 }
 
@@ -200,86 +177,69 @@ function mouseClicked() {
         currentColor = "blue";
     }
     if (mouseX > 350 && mouseX < 400 && mouseY > 0 && mouseY < 100) {
-        currentColor = "rgb(252, 98, 3)"
+        currentColor = "c"
     }
 
     if (mouseX > 450 && mouseX < 500 && mouseY > 0 && mouseY < 100) {
-        currentColor = "rgb(252, 157, 3)"
+        currentColor = "d"
     }
 
     if (mouseX > 550 && mouseX < 600 && mouseY > 0 && mouseY < 100) {
-        currentColor = "rgb(252, 223, 3)"
+        currentColor = "e"
     }
 
     if (mouseX > 650 && mouseX < 700 && mouseY > 0 && mouseY < 100) {
-        currentColor = "rgb(252, 252, 3)"
+        currentColor = "f"
     }
 
     if (mouseX > 750 && mouseX < 800 && mouseY > 0 && mouseY < 100) {
-        currentColor = "rgb(140, 252, 3)"
+        currentColor = "g"
     }
     if (mouseX > 850 && mouseX < 900 && mouseY > 0 && mouseY < 100) {
-        currentColor = "rgb(61, 252, 3)"
+        currentColor = "h"
     }
 
     if (mouseX > 950 && mouseX < 1000 && mouseY > 0 && mouseY < 100) {
-        currentColor = "rgb(3, 252, 177)"
+        currentColor = "i"
     }
 
     if (mouseX > 1050 && mouseX < 1100 && mouseY > 0 && mouseY < 100) {
-        currentColor = "rgb(3, 252, 240)"
+        currentColor = "j"
     }
 
     if (mouseX > 1150 && mouseX < 1200 && mouseY > 0 && mouseY < 100) {
-        currentColor = "rgb(3, 198, 252)"
+        currentColor = "k"
     }
 
     if (mouseX > 1250 && mouseX < 1300 && mouseY > 0 && mouseY < 100) {
-        currentColor = "rgb(3, 115, 252)"
+        currentColor = "l"
     }
 
     if (mouseX > 1350 && mouseX < 1400 && mouseY > 0 && mouseY < 100) {
-        currentColor = "rgb(3, 24, 252)"
+        currentColor = "m"
     }
-    // if (mouseX > 1450 && mouseX < 1500 && mouseY > 0 && mouseY < 100) {
-    //        currentColor = "rgb(132, 3, 252)"
-    //    }
-    //    if (mouseX > 1550 && mouseX < 1600 && mouseY > 0 && mouseY < 100) {
-    //        currentColor = "rgb(186, 3, 252)"
-    //    }
-    //    if (mouseX > 1650 && mouseX < 1700 && mouseY > 0 && mouseY < 100) {
-    //        currentColor = "rgb(252, 3, 240)"
-    //    }
-    //    if (mouseX > 1750 && mouseX < 1800 && mouseY > 0 && mouseY < 100) {
-    //        currentColor = "rgb(252, 3, 103)"
-    //    }
-    //    if (mouseX > 1850 && mouseX < 1900 && mouseY > 0 && mouseY < 100) {
-    //        currentColor = "black"
-    //    }
-    //    if (mouseX > 1950 && mouseX < 2000 && mouseY > 0 && mouseY < 100) {
-    //        currentColor = "white"
-    //    }
-    //    if (mouseX > 2050 && mouseX < 2100 && mouseY > 0 && mouseY < 100) {
-    //        currentColor = "yellow"
-    //    }
-    //    if (mouseX > 2150 && mouseX < 2200 && mouseY > 0 && mouseY < 100) {
-    //        currentColor = "orange"
-    //    }
-    //    if (mouseX > 2250 && mouseX < 2300 && mouseY > 0 && mouseY < 100) {
-    //        currentColor = "brown"
-    //    }
-    //    if (mouseX > 2350 && mouseX < 2400 && mouseY > 0 && mouseY < 100) {
-    //        currentColor = "pink"
-    //    }
-    //    if (mouseX > 2450 && mouseX < 2500 && mouseY > 0 && mouseY < 100) {
-    //        currentColor = "purple"
-    //    }
-    // if (mouseX > 2550 && mouseX < 2600 && mouseY > 0 && mouseY < 100) {
-    //     currentColor = "a"
-    // }
-    // if (mouseX > 2650 && mouseX < 2700 && mouseY > 0 && mouseY < 100) {
-    //     currentColor = "b"
-    // }
+    if(mouseX > 1450 && mouseX < 1500 && mouseY > 0 && mouseY < 100){
+        currentColor = "n"
+    }
+    if(mouseX > 1550 && mouseX < 1600 && mouseY > 0 && mouseY < 100){
+        currentColor = "o"
+    }
+    if(mouseX > 1650 && mouseX < 1700 && mouseY > 0 && mouseY < 100){
+        currentColor = "p"
+    }
+    if(mouseX > 1750 && mouseX < 1800 && mouseY > 0 && mouseY < 100){
+        currentColor = "q"
+    }
+    if(mouseX > 1850 && mouseX < 1900 && mouseY > 0 && mouseY < 100){
+        currentColor = "r"
+    }
+    if(mouseX > 1950 && mouseX < 2000 && mouseY > 0 && mouseY < 100){
+        currentColor = "s"
+    }
+    if(mouseX > 2050 && mouseX < 2100 && mouseY > 0 && mouseY < 100){
+        currentColor = "t"
+    }
+    
     
 
     
@@ -289,143 +249,113 @@ function mouseClicked() {
         mouseYArray.push(mouseY);
    
         if (currentColor == "green") {
-            screenImagesArray.push(adidasArray[0]);
-            widthArray.push(250);
-            heightArray.push(250);
+            screenImagesArray.push(nikeArray[0]);
+            widthArray.push(415);
+            heightArray.push(280);
         }
 
         if (currentColor == "red") {
-            screenImagesArray.push(adidasArray[1]);
+            screenImagesArray.push(pumaArray[0]);
             widthArray.push(262);
-            heightArray.push(250);
+            heightArray.push(290);
         }
         if (currentColor == "blue"){
-            screenImagesArray.push(adidasArray[2])
-            widthArray.push(240);
-            heightArray.push(240);
+            screenImagesArray.push(pumaArray[1])
+            widthArray.push(250);
+            heightArray.push(270);
         }
         
-        if(currentColor == "rgb(252, 98, 3)") {
-            screenImagesArray.push(pumaArray[1]);
-            widthArray.push(240);
-            heightArray.push(240);
-        }
-        if(currentColor == "rgb(252, 157, 3)") {
+        if(currentColor == "c") {
             screenImagesArray.push(pumaArray[2]);
-            widthArray.push(240);
-            heightArray.push(240);
+            widthArray.push(250);
+            heightArray.push(250);
         }
-        if(currentColor == "rgb(252, 223, 3)") {
+        if(currentColor == "d") {
             screenImagesArray.push(championArray[0]);
             widthArray.push(240);
             heightArray.push(240);
         }
-        if(currentColor == "rgb(252, 252, 3)") {
+        if(currentColor == "e") {
             screenImagesArray.push(championArray[1]);
             widthArray.push(240);
             heightArray.push(240);
         }
-        if(currentColor == "rgb(140, 252, 3)"){
+        if(currentColor == "f") {
             screenImagesArray.push(championArray[2]);
             widthArray.push(240);
             heightArray.push(240);
         }
-        if(currentColor == "rgb(61, 252, 3)") {
+        if(currentColor == "g"){
             screenImagesArray.push(championArray[3]);
             widthArray.push(240);
-            heightArray.push(240);
+            heightArray.push(250);
         }
-        if(currentColor == "rgb(3, 252, 177)") {
+        if(currentColor == "h") {
             screenImagesArray.push(championArray[4]);
-            widthArray.push(240);
-            heightArray.push(240);
+            widthArray.push(225);
+            heightArray.push(250);
         }
-        if(currentColor == "rgb(3, 252, 240)") {
+        if(currentColor == "i") {
             screenImagesArray.push(championArray[5]);
             widthArray.push(240);
             heightArray.push(240);
         }
-        if(currentColor == "rgb(3, 198, 252)"){
-            screenImagesArray.push(championArray[6]);
+        if(currentColor == "j") {
+            screenImagesArray.push(nikeArray[2]);
+            widthArray.push(410);
+            heightArray.push(250);
+        }
+        if(currentColor == "k"){
+            screenImagesArray.push(nikeArray[3]);
+            widthArray.push(340);
+            heightArray.push(180);
+        }
+        if(currentColor == "l"){
+            screenImagesArray.push(nikeArray[7]);
             widthArray.push(240);
             heightArray.push(240);
         }
-        if(currentColor == "rgb(3, 115, 252)"){
-            screenImagesArray.push(championArray[7]);
-            widthArray.push(240);
-            heightArray.push(240);
+        if(currentColor == "m") {
+            screenImagesArray.push(nikeArray[8]);
+            widthArray.push(380);
+            heightArray.push(250);
         }
-        if(currentColor == "rgb(3, 24, 252)") {
-            screenImagesArray.push(nikeArray[0]);
-            widthArray.push(400);
-            heightArray.push(275);
+        if(currentColor == "n") {
+            screenImagesArray.push(nikeArray[11]);
+            widthArray.push(250);
+            heightArray.push(250);
         }
-        // if(currentColor == "rgb(132, 3, 252)") {
-        //     screenImagesArray.push(nikeArray[7]);
-        //     widthArray.push(250);
-        //     heightArray.push(250);
-        // }
-        // if(currentColor == "rgb(186, 3, 252)"){
-        //     screenImagesArray.push(nikeArray[8]);
-        //     widthArray.push(250);
-        //     heightArray.push(250);
-        // }
-        // if(currentColor == "rgb(252, 3, 240)") {
-        //     screenImagesArray.push(nikeArray[9]);
-        //     widthArray.push(250);
-        //     heightArray.push(250);
-        // }
-        // if(currentColor == "rgb(252, 3, 103)") {
-        //     screenImagesArray.push(nikeArray[11]);
-        //     widthArray.push(250);
-        //     heightArray.push(250);
-        // }
-        // if(currentColor == "black") {
-        //     screenImagesArray.push(nikeArray[15]);
-        //     widthArray.push(250);
-        //     heightArray.push(250);
-        // }
-        // if(currentColor == "white") {
-        //     screenImagesArray.push(nikeArray[19]);
-        //     widthArray.push(250);
-        //     heightArray.push(250);
-        // }
-        // if(currentColor == "yellow") {
-        //     screenImagesArray.push(nikeArray[21]);
-        //     widthArray.push(250);
-        //     heightArray.push(250);
-        // }
-        // if(currentColor == "orange") {
-        //     screenImagesArray.push(nikeArray[14]);
-        //     widthArray.push(250);
-        //     heightArray.push(250);
-        // }
-        // if(currentColor == "brown") {
-        //     screenImagesArray.push(nikeArray[22]);
-        //     widthArray.push(250);
-        //     heightArray.push(250);
-        // }
-        // if(currentColor == "pink") {
-        //     screenImagesArray.push(nikeArray[23]);
-        //     widthArray.push(250);
-        //     heightArray.push(250);
-        // }
-        // if(currentColor == "purple") {
-        //     screenImagesArray.push(nikeArray[30]);
-        //     widthArray.push(250);
-        //     heightArray.push(250);
-        // }
-        // if(currentColor == "a") {
-        //     screenImagesArray.push(nikeArray[24]);
-        //     widthArray.push(250);
-        //     heightArray.push(250);
-        // }
-        // if(currentColor == "b") {
-        //     screenImagesArray.push(nikeArray[25]);
-        //     widthArray.push(250);
-        //     heightArray.push(250);
-        // }
-
+        if(currentColor == "o") {
+            screenImagesArray.push(nikeArray[4]);
+            widthArray.push(415);
+            heightArray.push(280);
+        }
+        if(currentColor == "p") {
+            screenImagesArray.push(nikeArray[5]);
+            widthArray.push(415);
+            heightArray.push(280);
+        }
+        if(currentColor == "q") {
+            screenImagesArray.push(nikeArray[6]);
+            widthArray.push(415);
+            heightArray.push(280);
+        }
+        if(currentColor == "r") {
+            screenImagesArray.push(nikeArray[9]);
+            widthArray.push(415);
+            heightArray.push(280);
+        }
+        if(currentColor == "s") {
+            screenImagesArray.push(nikeArray[10]);
+            widthArray.push(415);
+            heightArray.push(280);
+        }
+        if(currentColor == "t") {
+            screenImagesArray.push(nikeArray[12]);
+            widthArray.push(415);
+            heightArray.push(280);
+        }
+     
      
         
     }
